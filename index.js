@@ -9,7 +9,6 @@ module.exports = function cache(options) {
     };
     return function(req, res, next) {
         function serveFileStream() {
-            'use strict';
             console.log('Serving from caché', req.url, fileName);
             res.setHeader("Content-Type", "text/html");
             fs.createReadStream(filePath).pipe(res);
@@ -41,5 +40,5 @@ module.exports = function cache(options) {
             console.log("User session - not cached", req.url);
             next();
         }
-    }
+    };
 };
