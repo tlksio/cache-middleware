@@ -4,15 +4,15 @@ var md5 = require('MD5');
 var defaultOptions = {
     "path": "/tmp",
     "ttl": 3600000
-}
+};
 
 module.exports = function cache(options) {
     'use strict';
     options = options || defaultOptions;
     return function(req, res, next) {
         // Check if the user is logged
+        var url = req.url;
         if (req.session.user === undefined) {
-            var url = req.url;
             var fileName = md5(url);
             var filePath = options.path + "/" + fileName;
             // check if a cached copy exists
