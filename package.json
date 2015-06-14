@@ -1,0 +1,39 @@
+{
+  "name": "cache-middleware",
+  "version": "0.0.1",
+  "description": "cache middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "make lint && make cover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlksio/cache-middleware.git"
+  },
+  "keywords": [
+    "tlks",
+    "cache",
+    "middleware",
+    "expressjs",
+    "connect"
+  ],
+  "author": "Raül Pérez <repejota@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlksio/cache-middleware/issues"
+  },
+  "homepage": "https://github.com/tlksio/cache-middleware",
+  "dependencies": {
+    "MD5": "^1.2.2"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-jshint": "^1.11.0",
+    "istanbul": "^0.3.15",
+    "jshint-reporter-jscs": "^0.1.0",
+    "jshint-stylish": "^2.0.0",
+    "mocha": "^2.2.5"
+  }
+}
