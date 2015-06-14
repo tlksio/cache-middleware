@@ -19,7 +19,7 @@ module.exports = function cache(options) {
         if (req.session.user === undefined) {
             // serve cache only to registered users
             var fileName = md5(req.url);
-            var filePath = options.path + fileName;
+            var filePath = options.path + "/" + fileName;
             fs.exists(filePath, function(exists) {
                 if (exists) {
                     fs.stat(filePath, function(err, stats) {
