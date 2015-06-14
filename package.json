@@ -1,0 +1,25 @@
+{
+  "name": "cache-middleware",
+  "version": "0.1.0",
+  "description": "An expressjs & connect cache middleware.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlksio/cache-middleware.git"
+  },
+  "keywords": [
+    "tlksio",
+    "cache",
+    "middleware",
+    "connect"
+  ],
+  "author": "Raül Pérez <repejota@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tlksio/cache-middleware/issues"
+  },
+  "homepage": "https://github.com/tlksio/cache-middleware"
+}
