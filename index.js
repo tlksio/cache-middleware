@@ -1,4 +1,5 @@
 var fs = require('fs');
+var md5 = require('MD5');
 
 function serveFileStream() {
     'use strict';
@@ -37,6 +38,5 @@ exports.cache = function() {
             console.log("User session - not cached", req.url);
             next();
         }
-
     }
-}
+};
