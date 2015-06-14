@@ -1,13 +1,6 @@
 var fs = require('fs');
 var md5 = require('MD5');
 
-function serveFileStream() {
-    'use strict';
-    console.log('Serving from caché', req.url, fileName);
-    res.setHeader("Content-Type", "text/html");
-    fs.createReadStream(filePath).pipe(res);
-}
-
 module.exports = function cache(options) {
     'use strict';
     options = options || {
@@ -15,6 +8,13 @@ module.exports = function cache(options) {
         "ttl": 3600000
     };
     return function(req, res, next) {
+        function serveFileStream() {
+            'use strict';
+            console.log('Serving from caché', req.url, fileName);
+            res.setHeader("Content-Type", "text/html");
+            fs.createReadStream(filePath).pipe(res);
+        }
+
         // Check if the user is logged
         if (req.session.user === undefined) {
             // serve cache only to registered users
