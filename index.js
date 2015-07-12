@@ -2,7 +2,7 @@ var fs = require('fs');
 var md5 = require('MD5');
 
 var defaultOptions = {
-    "path": "/tmp",
+    "path": "/opt/tlks.io/.cache",
     "ttl": 3600000
 };
 
